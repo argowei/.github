@@ -1,0 +1,40 @@
+name: Bug report
+description: Report something that does not work as expected
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: "Please remove passwords, session tokens, private IP addresses, MAC addresses, and other sensitive data from logs and screenshots. For a vulnerability, follow SECURITY.md instead."
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Describe the behavior you saw and what you expected.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      placeholder: "1. Configure…\n2. Run…\n3. Observe…"
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+      placeholder: "Commit SHA or release, if known"
+  - type: dropdown
+    id: deployment
+    attributes:
+      label: Deployment
+      options:
+        - Docker Compose
+        - systemd
+        - Local development
+        - Other
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs or screenshots
+      description: Redact sensitive information before posting.
